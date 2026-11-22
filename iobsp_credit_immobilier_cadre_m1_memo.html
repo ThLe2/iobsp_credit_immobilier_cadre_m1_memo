@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Fiche mémo — L&#x27;encadrement du crédit immobilier</title><style>
+:root{--prune:#8C1E70;--prune-fonce:#5E1349;--prune-clair:#F4E6EE;--accent:#C77BAA;
+ --vert:#283C28;--gris:#3C3C3C;--gris-moyen:#8A7A85;--filet:#E8DCE5;--creme:#FAF6F8;
+ --ok:#2F7A4F;--ko:#B23B3B;--amb:#B5852A;}
+*{box-sizing:border-box}
+body{margin:0;background:var(--creme);color:var(--gris);
+ font-family:"Nunito","Segoe UI",Helvetica,Arial,sans-serif;font-size:16px;line-height:1.62}
+.wrap{max-width:900px;margin:0 auto;padding:0 18px 60px}
+header.bandeau{background:var(--prune-fonce);color:#fff;padding:18px 0;border-bottom:4px solid var(--accent)}
+header.bandeau .wrap{padding-bottom:0}
+.chapitre{font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:#EAD3E3}
+.chapitre span{color:var(--accent);margin:0 6px}
+h1{font-family:Georgia,"Times New Roman",serif;font-size:27px;line-height:1.25;margin:8px 0 4px;color:#fff}
+.sous{color:#EAD3E3;font-size:14.5px;margin:0}
+h2{font-family:Georgia,"Times New Roman",serif;font-size:20px;color:var(--prune-fonce);
+ margin:34px 0 0;padding-bottom:8px;border-bottom:2px solid var(--filet)}
+h2 .num{color:var(--accent);margin-right:8px}
+h3{font-size:15px;color:var(--vert);margin:20px 0 8px;letter-spacing:.02em}
+.carte{background:#fff;border:1px solid var(--filet);border-radius:10px;padding:20px 22px;margin:18px 0;
+ box-shadow:0 1px 2px rgba(94,19,73,.05)}
+.enc{background:var(--prune-clair);border-left:5px solid var(--prune);padding:14px 18px;
+ border-radius:0 8px 8px 0;margin:18px 0;font-size:15.2px}
+.enc .t{display:block;font-size:11.5px;letter-spacing:.11em;text-transform:uppercase;
+ font-weight:800;color:var(--prune-fonce);margin-bottom:6px}
+.enc.al{background:#FBF4F4;border-left-color:var(--ko)}.enc.al .t{color:var(--ko)}
+.enc.ci{background:#FCF8F0;border-left-color:var(--amb)}.enc.ci .t{color:#8A6418}
+.situ{background:#FCF9FB;border:1px dashed var(--filet);border-radius:8px;padding:16px 18px;margin:16px 0;font-size:15.2px}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:16px 0}
+.duo>div{background:#fff;border:1px solid var(--filet);border-radius:9px;padding:15px 17px;font-size:14.8px}
+.duo .h{font-weight:800;color:var(--prune-fonce);margin-bottom:7px;font-size:14.5px}
+.tri{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:16px 0}
+.tri>div{background:#fff;border:1px solid var(--filet);border-radius:9px;padding:14px 15px;font-size:14.3px}
+.quad{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:16px 0}
+.quad>div{background:#fff;border:1px solid var(--filet);border-radius:9px;padding:12px 13px;font-size:13.6px}
+.quad .h{font-weight:800;color:var(--prune-fonce);margin-bottom:6px;font-size:13px;
+ text-transform:uppercase;letter-spacing:.04em}
+.tri .h{font-weight:800;color:var(--prune-fonce);margin-bottom:6px;font-size:13.5px;
+ text-transform:uppercase;letter-spacing:.05em}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14.8px;background:#fff}
+th,td{border:1px solid var(--filet);padding:9px 12px;text-align:left}
+thead th{background:var(--prune-clair);color:var(--prune-fonce);font-size:13.5px}
+tbody th{font-weight:600;color:var(--gris)}
+td.n{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+tr.tot td,tr.tot th{background:#FBF3F8;font-weight:800;color:var(--prune-fonce)}
+.dl{display:inline-flex;align-items:center;gap:9px;background:var(--prune);color:#fff;text-decoration:none;
+ padding:11px 20px;border-radius:8px;font-weight:700;font-size:15px;margin:20px 0 4px}
+.dl:hover{background:var(--prune-fonce)}
+ol.q{padding-left:0;list-style:none;counter-reset:q}
+ol.q>li{margin:16px 0;padding-left:38px;position:relative}
+ol.q>li::before{counter-increment:q;content:counter(q);position:absolute;left:0;top:1px;
+ width:26px;height:26px;border-radius:50%;background:var(--prune-clair);color:var(--prune-fonce);
+ font-weight:800;font-size:14px;display:flex;align-items:center;justify-content:center}
+b,strong{color:var(--vert)}
+footer{text-align:center;font-size:12.5px;color:var(--gris-moyen);padding:26px 18px 12px;
+ border-top:1px solid var(--filet);margin-top:44px}
+@media(max-width:860px){.quad{grid-template-columns:1fr 1fr}}
+@media(max-width:640px){.duo,.tri,.quad{grid-template-columns:1fr}h1{font-size:22px}}
+@media print{body{background:#fff}.dl{display:none}header.bandeau{background:#5E1349 !important;-webkit-print-color-adjust:exact;print-color-adjust:exact}}
+td{vertical-align:top}td:first-child{white-space:nowrap}.tri{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:16px 0}.tri>div{background:#fff;border:1px solid var(--filet);border-radius:9px;padding:14px 15px;font-size:14.3px}.tri .h,.duo .h{font-weight:800;color:var(--prune-fonce);margin-bottom:6px;font-size:13.5px;text-transform:uppercase;letter-spacing:.05em}.duo{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:16px 0}.duo>div{background:#fff;border:1px solid var(--filet);border-radius:9px;padding:15px 17px;font-size:14.8px}@media(max-width:640px){.tri,.duo{grid-template-columns:1fr}}.enc,tr,.tri,.duo{break-inside:avoid}
+.enc p,.cols p{margin:6px 0}.enc.ok{background:#F1F7F3;border-left-color:var(--ok)}.enc.ok .t{color:var(--ok)}
+.cols{display:grid;gap:14px;margin:16px 0}.cols.c2{grid-template-columns:1fr 1fr}.cols.c3{grid-template-columns:repeat(3,1fr)}.cols.c4{grid-template-columns:repeat(4,1fr)}.cols.c5,.cols.c6{grid-template-columns:repeat(3,1fr)}
+.cols>div>.enc{margin:0;height:100%}.cols table{margin:0}
+p.src{font-size:12.5px;color:var(--gris-moyen);line-height:1.5}
+td,th{vertical-align:top}
+@media(max-width:760px){.cols.c2,.cols.c3,.cols.c4,.cols.c5,.cols.c6{grid-template-columns:1fr}}
+table.frise{table-layout:fixed;font-size:13px}.enc h3{margin:2px 0 8px;font-family:Georgia,serif;color:var(--prune-fonce);font-size:16px}
+.cols>div>.enc{margin:0}
+
+/* Frise et cartes (remplacent les tableaux « frise » issus de la conversion du PDF) */
+.etapes{display:grid;grid-template-columns:repeat(6,1fr);gap:10px;margin:16px 0;counter-reset:etape}
+.etape{position:relative;background:#fff;border:1px solid var(--filet);border-top:4px solid var(--prune);border-radius:8px;padding:12px 12px 11px;font-size:14px;line-height:1.4;color:var(--gris)}
+.etape .tt{display:block;font-weight:800;color:var(--prune-fonce);margin-bottom:5px;font-size:14.5px;line-height:1.25}
+.etape .ref{display:block;margin-top:6px;font-size:12.5px;color:var(--gris-moyen)}
+.etapes.ordre .etape{padding-top:26px}
+.etapes.ordre .etape::before{counter-increment:etape;content:counter(etape);position:absolute;top:-13px;left:12px;width:24px;height:24px;border-radius:50%;background:var(--prune);color:#fff;font-weight:800;font-size:13px;display:flex;align-items:center;justify-content:center}
+.etape.vente{border-top-color:#2E5C8A}.etape.vente .tt{color:#1F4468}.etapes.ordre .etape.vente::before{background:#2E5C8A}
+.etape.alerte{border-top-color:var(--ko)}.etape.alerte .tt{color:var(--ko)}
+@media (max-width:900px){.etapes{grid-template-columns:repeat(3,1fr);row-gap:22px}}@media (max-width:520px){.etapes{grid-template-columns:repeat(2,1fr)}}
+.legende{display:flex;flex-wrap:wrap;gap:14px;font-size:13px;color:var(--gris);margin:-4px 0 14px}
+.legende span::before{content:"";display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:6px;vertical-align:-1px;background:var(--prune)}
+.legende .vente::before{background:#2E5C8A}
+</style></head><body>
+<header class="bandeau"><div class="wrap"><div class="chapitre">IOBSP NIVEAU 2 · JOURNÉE 5 · CRÉDIT IMMOBILIER (1/3) — MODULE 1</div><h1>L&#x27;encadrement du crédit immobilier</h1><p class="sous">Fiche mémo détaillée — Scrivener, SRU, MURCEF, Châtel et le régime en vigueur</p></div></header>
+<main class="wrap"><a class="dl" href="J5_M1_Fiche_memo.pdf" download>⬇ Télécharger la fiche mémo (PDF)</a>
+<h2>1 · Le champ d&#x27;application</h2>
+<table><thead><tr><th><b>Critère</b></th><th><b>Contenu</b></th></tr></thead><tbody><tr><td><b>L&#x27;objet du financement</b></td><td>Acquisition d&#x27;un <b>immeuble à usage d&#x27;habitation ou à usage mixte</b> · <b>travaux</b> · achat d&#x27;un <b>terrain destiné à construire</b></td></tr><tr><td><b>Ou la garantie</b></td><td>Présence d&#x27;une <b>garantie hypothécaire</b> ou d&#x27;une sûreté comparable sur un immeuble</td></tr><tr><td><b>La charnière avec le crédit conso</b></td><td>Pour les travaux: <b>régime immobilier</b> s&#x27;ils sont <b>garantis par une hypothèque</b> ou <b>financés avec l&#x27;acquisition</b>; sinon <b>crédit à</b> <b>la consommation, quel que soit le montant</b> (art. L. 312-4, vérifié le 18/11/2026)</td></tr><tr><td><b>Siège</b></td><td>Code de la consommation, chapitre III du titre I du livre III — <b>art. L. 313-1 à L. 313-64</b></td></tr></tbody></table>
+<h2>2 · Scrivener 2 — la loi fondatrice</h2>
+<p><b>Loi n° 79-596 du 13 juillet 1979.</b> Attention: il existe <b>deux</b> lois Scrivener. Celle de <b>1978</b> vise le <b>crédit à la consommation</b>, celle de <b>1979</b> le <b>crédit immobilier</b>. Maintes fois modifiée et recodifiée — <i>la numérotation a changé, la philosophie non</i>.</p>
+<table><thead><tr><th><b>Apport</b></th><th><b>Contenu</b></th></tr></thead><tbody><tr><td><b>1. L&#x27;offre préalable</b></td><td>Offre <b>écrite</b>, au contenu <b>réglementé</b>, adressée à l&#x27;emprunteur et, le cas échéant, <b>aux cautions</b>. On ne discute pas un crédit immobilier oralement</td></tr><tr><td><b>2. Le délai de réflexion</b></td><td><b>DIX JOURS</b> à compter de la <b>réception de l&#x27;offre</b> (art. L. 313-34). Acceptation possible <b>à compter du 11ᵉ jour</b></td></tr><tr><td><b>3. L&#x27;interdépendance</b></td><td>La vente est réputée conclue sous la <b>condition suspensive de l&#x27;obtention du prêt</b>. Prêt non obtenu → <b>vente caduque</b> et <b>restitution</b> des sommes versées</td></tr></tbody></table>
+<div class="enc"><span class="t">LA CONSTRUCTION SINGULIÈRE DU DÉLAI DE RÉFLEXION</span><p>Ce n&#x27;est <b>pas une faculté</b> offerte à l&#x27;emprunteur: c&#x27;est une <b>interdiction faite aux deux parties</b>. L&#x27;emprunteur <b>ne peut pas y renoncer</b>, même pressé, même volontaire. Règle d&#x27;<b>ordre public</b>.<br><b>Sanction du non-respect: la NULLITÉ du contrat de prêt.</b></p></div>
+<div class="enc"><p><b>LE PENDANT: LE MAINTIEN DE L&#x27;OFFRE</b></p><p>Le prêteur maintient les conditions de son offre <b>pendant au moins TRENTE JOURS</b> à compter de sa réception par l&#x27;emprunteur. C&#x27;est un <b>minimum</b> — rien n&#x27;interdit davantage.<br><b>10 jours d&#x27;interdiction + 30 jours de maintien → une vingtaine de jours pour décider.</b></p></div>
+<h2>3 · LE PIÈGE — deux délais de dix jours</h2>
+<div class="cols c2"><div><div class="enc"><p><b>Le délai de RÉTRACTATION</b><br><b>Qui ?</b> L&#x27;<b>ACQUÉREUR</b> non professionnel<br><b>Quoi ?</b> Un immeuble à <b>usage d&#x27;habitation</b>, quel que soit le statut du vendeur<br><b>Où ? Art. L. 271-1 du code de la construction et de l&#x27;habitation</b><br><b>Quand ?</b> Au <b>DÉBUT</b> — lendemain de la <b>NOTIFICATION</b> de l&#x27;avant-contrat <b>Effet ?</b> Revenir sur un engagement <b>déjà pris</b></p></div></div><div><div class="enc"><p><b>Le délai de RÉFLEXION</b><br><b>Qui ?</b> L&#x27;<b>EMPRUNTEUR</b><br><b>Quoi ?</b> Le <b>crédit</b><br><b>Où ? Art. L. 313-34 du code de la consommation</b><br><b>Quand ? PLUS TARD</b> — à compter de la <b>réception de l&#x27;offre de prêt</b> <b>Effet ? Interdire</b> de s&#x27;engager trop vite</p></div></div></div>
+<div class="enc"><span class="t">LA PHRASE POUR NE PLUS LES CONFONDRE</span><p><b>L&#x27;acquéreur SE RÉTRACTE de ce qu&#x27;il a signé. L&#x27;emprunteur RÉFLÉCHIT avant de signer.</b><br>Deux codes · deux qualités d&#x27;une même personne · deux moments. Et l&#x27;expression « délai de rétractation du prêt» <b>n&#x27;existe pas</b>.</p></div>
+<h2>4 · Le délai SRU en détail</h2>
+<table><thead><tr><th><b>Point</b></th><th><b>Contenu</b></th></tr></thead><tbody><tr><td><b>Texte</b></td><td><b>Loi n° 2000-1208 du 13 décembre 2000</b>, dite SRU, art. 72 — <b>art. L. 271-1 CCH</b></td></tr><tr><td><b>Durée</b></td><td><b>SEPT jours à l&#x27;origine</b>, portés à <b>DIX</b> par la <b>loi n° 2015-990 du 6 août 2015</b> (loi Macron), <b>à compter du 8 août 2015</b>. Un support parlant de 7 jours est antérieur à cette date</td></tr><tr><td><b>Point de départ</b></td><td>La <b>NOTIFICATION</b> de l&#x27;avant-contrat — <b>et non sa signature</b>. Un compromis signé le lundi et notifié le vendredi fait courir le délai à partir du samedi, lendemain de la présentation</td></tr><tr><td><b>Décompte</b></td><td>Jours <b>calendaires</b>. Si le dernier jour est chômé, prorogation au <b>premier jour ouvrable suivant</b></td></tr><tr><td><b>Bénéficiaire</b></td><td>L&#x27;acquéreur <b>NON PROFESSIONNEL</b>. Une société dont l&#x27;objet social couvre l&#x27;opération n&#x27;en bénéficie pas</td></tr><tr><td><b>Art. L. 271-2</b></td><td><b>Aucun versement</b> ne peut être reçu de l&#x27;acquéreur non professionnel <b>avant l&#x27;expiration</b> du délai — sauf dispositions expresses contraires: immeuble neuf d&#x27;habitation, contrats préliminaires de vente d&#x27;immeubles à construire, location- accession</td></tr></tbody></table>
+<div class="enc"><p><b>L&#x27;ERREUR LA PLUS FRÉQUENTE — Y COMPRIS CHEZ LES PROFESSIONNELS DE L&#x27;IMMOBILIER</b></p><p>Croire que le délai court <b>à compter de la signature</b> du compromis. Il court <b>à compter du lendemain de la première présentation de sa notification</b>.</p></div>
+<h2>5 · MURCEF et Châtel — leur place réelle</h2>
+<table><thead><tr><th><b>Loi</b></th><th><b>Ce qu&#x27;elle fait</b></th><th><b>Sa portée en immobilier</b></th></tr></thead><tbody><tr><td><b>MURCEF</b> <b>11 décembre 2001</b></td><td>Convention de compte · <b>encadrement des ventes</b> <b>groupées</b>: un produit ou service groupé ne peut être imposé s&#x27;il peut être <b>acheté séparément</b></td><td><b>Indirecte mais réelle</b>: éclaire tout ce qui touche à l&#x27;assurance emprunteur et aux services associés — journée 9</td></tr><tr><td><b>Châtel</b></td><td>Renforcement de l&#x27;information du consommateur · encadrement de la <b>reconduction tacite</b></td><td><b>Marginale</b>: son terrain d&#x27;élection est le <b>crédit à la consommation</b> — journée 3</td></tr></tbody></table>
+<div class="enc"><span class="t">LA HIÉRARCHIE À RETENIR</span><p>En matière immobilière: <b>Scrivener et la transposition de 2016 font l&#x27;essentiel du régime</b> · <b>SRU protège l&#x27;acquéreur</b> du côté de la vente · <b>MURCEF et</b> <b>Châtel jouent en appui</b>, sur des points précis. Ne pas leur prêter un rôle central qu&#x27;elles n&#x27;ont pas ici.</p></div>
+<h2>6 · Le régime en vigueur — l&#x27;ordonnance du 25 mars 2016</h2>
+<p>Transposition de la <b>directive de 2014</b> sur les contrats de crédit relatifs aux biens immobiliers à usage résidentiel. Elle <b>n&#x27;a pas supprimé</b> les protections Scrivener: elle leur a <b>ajouté un étage</b>.</p>
+<table><thead><tr><th><b>Apport</b></th><th><b>Contenu · et où il est traité</b></th></tr></thead><tbody><tr><td><b>La FISE</b></td><td><b>Fiche d&#x27;information standardisée européenne</b>: document normalisé, identique dans toute l&#x27;Union, permettant de comparer les offres. <b>Traitée en journée 11</b></td></tr><tr><td><b>Les informations générales</b></td><td><b>Disponibilité permanente</b> d&#x27;informations générales, claires et compréhensibles, sur papier, support durable ou forme électronique. <b>Obligation pesant sur le prêteur ET SUR L&#x27;INTERMÉDIAIRE DE CRÉDIT</b> — elle vous concerne directement</td></tr><tr><td><b>L&#x27;évaluation de la solvabilité</b></td><td>Transposée en matière immobilière. Mécanisme connu depuis la journée 3</td></tr><tr><td><b>Explications, publicité, TAEG</b></td><td>Explications adéquates · encadrement de la publicité · régime du TAEG — <b>module 4 de cette journée</b></td></tr></tbody></table>
+<div class="enc"><span class="t">LES TROIS MENTIONS OBLIGATOIRES DE TOUTE PUBLICITÉ</span><p>Tout document publicitaire portant sur une opération de crédit immobilier mentionne:<br>① que l&#x27;emprunteur dispose d&#x27;un <b>délai de réflexion de dix jours</b> · ② que la <b>vente est subordonnée à l&#x27;obtention du prêt</b> · ③ que, si le prêt n&#x27;est pas obtenu, le <b>vendeur doit rembourser les sommes versées</b>.<br><i>Vous reconnaissez les trois apports de Scrivener: le délai, l&#x27;interdépendance, la restitution.</i></p></div>
+<h2>7 · La ligne du temps d&#x27;une opération d&#x27;accession</h2>
+<div class="etapes ordre"><div class="etape vente"><span class="tt">Avant-contrat</span>Compromis ou promesse, puis <b>notification</b> à l&#x27;acquéreur</div><div class="etape vente"><span class="tt">10 jours SRU</span>Rétractation de l&#x27;<b>acquéreur</b>, à compter du lendemain de la notification<span class="ref">art. L. 271-1 CCH</span></div><div class="etape"><span class="tt">Demande de prêt</span>Instruction du dossier par le prêteur</div><div class="etape"><span class="tt">Offre de prêt</span>Maintenue <b>30 jours minimum</b></div><div class="etape"><span class="tt">10 jours Scrivener</span>Réflexion de l&#x27;<b>emprunteur</b> à compter de la réception de l&#x27;offre<span class="ref">art. L. 313-34 C. consom.</span></div><div class="etape"><span class="tt">Acceptation</span>Au plus tôt le <b>11ᵉ jour</b></div></div>
+<div class="legende"><span class="vente">L&#x27;acquéreur et la vente (CCH)</span><span>L&#x27;emprunteur et le crédit (C. consom.)</span></div>
+<p class="src"><b>Les deux délais ne se mélangent jamais :</b> l&#x27;un protège l&#x27;acquéreur, l&#x27;autre l&#x27;emprunteur.</p>
+<div class="enc"><span class="t">CE QUE LA RÉFORME DU 20 NOVEMBRE 2026 CHANGE — ET NE CHANGE PAS</span><p>L&#x27;ordonnance n° 2025-880 du 3 septembre 2025 transpose la directive de 2023 sur le <b>CRÉDIT À LA CONSOMMATION</b>: elle <b>ne modifie pas</b> le régime du crédit immobilier. La date du 20 novembre 2026, omniprésente en journée 3, <b>ne joue pas ici</b>.</p><div class="enc ci"><p>Conséquence: les deux régimes vont diverger davantage. Le crédit à la consommation se rapproche du niveau d&#x27;exigence immobilier sur plusieurs points, sans que l&#x27;inverse soit vrai. <b>Attention aux travaux</b>: ce n&#x27;est pas leur montant qui décide du régime, mais la garantie et le lien avec l&#x27;acquisition.</p></div></div>
+<div class="enc"><p><b>CE QUI TOMBE À L&#x27;EXAMEN</b></p><p>• <b>Scrivener 2 = loi du 13 juillet 1979</b> (celle de 1978 vise la consommation).<br>• Ses <b>trois apports</b>: offre préalable · délai de réflexion · interdépendance prêt/vente.<br>• <b>10 jours</b> de réflexion à compter de la <b>réception de l&#x27;offre</b> · acceptation au <b>11ᵉ jour</b> · <b>ordre public</b> · sanction = <b>nullité</b>.<br>• Offre maintenue <b>au moins 30 jours</b>.<br>• <b>SRU</b>: rétractation de l&#x27;<b>acquéreur non professionnel</b>, <b>10 jours</b> (7 à l&#x27;origine, portés à 10 le <b>8 août 2015</b>), à compter du lendemain de la <b>notification</b>.<br>• <b>L. 271-2</b>: aucun versement avant l&#x27;expiration du délai, sauf exceptions expresses.<br>• Les <b>trois mentions</b> obligatoires de la publicité.<br>• Régime en vigueur: <b>ordonnance du 25 mars 2016</b>, transposant la directive de 2014.<br>• Les informations générales sont dues par le prêteur <b>ET par l&#x27;intermédiaire</b>.</p></div>
+<p class="src"><b>Sources vérifiées au 19 août 2026.</b> <i>Code de la consommation, art. L. 313-1 à L. 313-64, dont L. 313-34 · loi n° 79-596 du 13 juillet 1979 (Scrivener 2) · ordonnance n° 2016-351 du 25 mars</i> <i>2016, transposant la directive de 2014 · code de la construction et de l&#x27;habitation, art. L. 271-1 et L. 271-2 · loi n° 2000-1208 du 13 décembre 2000 (SRU), art. 72 · loi n° 2015-990 du 6</i> <i>août 2015, art. 210 · loi n° 2001-1168 du 11 décembre 2001 (MURCEF) · ordonnance n° 2025-880 du 3 septembre 2025 (citée pour être écartée) · arrêté du 18 juillet 2022, annexe A.</i></p>
+<div class="enc"><p><b>Références vérifiées le 18 novembre 2026</b> <i>: la méconnaissance du délai de réflexion est sanctionnée par la nullité relative du prêt (Cass. 1re civ., 27 février 2001, n° 98-19.857;</i> <i>prescription de cinq ans, Cass. 1re civ., 12 juillet 2005); il n&#x27;existe pas de seuil de bascule à 75 000 € pour les travaux non garantis (art. L. 312-4). Les articles L. 313-1 et suivants ayant</i> <i>été modifiés à plusieurs reprises depuis 2016, vérifier la version en vigueur avant chaque diffusion.</i></p></div>
+</main>
+<footer>TMK Performances - N° Siret : 49841924100027 - Code NAF : 8559A</footer>
+</body></html>
